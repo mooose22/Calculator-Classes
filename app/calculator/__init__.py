@@ -1,10 +1,10 @@
-from app.operations import add, subtract, multiply, divide
+from app.operations import CalculatorOperations
 
 def calculator():
+    ops = CalculatorOperations()
+
     print("Simple Calculator")
     print("Format: <operation> <num1> <num2>")
-    print("Operations: add, subtract, multiply, divide")
-    print("Example: add 2 3")
     print("Type 'exit' to quit.\n")
 
     while True:
@@ -29,13 +29,13 @@ def calculator():
             continue
 
         if op == "add":
-            result = add(a, b)
+            result = ops.add(a, b)
         elif op == "subtract":
-            result = subtract(a, b)
+            result = ops.subtract(a, b)
         elif op == "multiply":
-            result = multiply(a, b)
+            result = ops.multiply(a, b)
         elif op == "divide":
-            result = divide(a, b)
+            result = ops.divide(a, b)
         else:
             print("Unknown operation.")
             continue

@@ -1,13 +1,15 @@
-def add(a, b):
-    return a + b
+class CalculatorOperations:
+    def add(self, a: float, b: float) -> float:
+        return a + b
 
-def subtract(a, b):
-    return a - b
+    def subtract(self, a: float, b: float) -> float:
+        return a - b
 
-def multiply(a, b):
-    return a * b
+    def multiply(self, a: float, b: float) -> float:
+        return a * b
 
-def divide(a, b):
-    if b == 0:
-        return "Error: cannot divide by zero"
-    return a / b
+    def divide(self, a: float, b: float) -> float | str:
+        if b == 0:
+            return "Error: cannot divide by zero"
+        return a / b
+
